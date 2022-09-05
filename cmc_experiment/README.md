@@ -9,9 +9,9 @@ https://github.com/DeepPathology/MITOS_WSI_CMC
 0. Build Environment  
 
 ```
-docker pull continuumio/anaconda3:2021.05  
-docker build -t gaussunet .  
-docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:8888 --name gaussunet gaussunet  
+sudo docker pull continuumio/anaconda3:2021.05  
+sudo docker build -t gaussunet .  
+sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:8888 --name gaussunet gaussunet  
 ```
 
 1. Clone the git repository of CMC dataset   
