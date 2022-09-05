@@ -9,7 +9,7 @@ RUN apt-get install -y libgl1-mesa-dev
 COPY . /workdir
 
 # create virtual environment and activate
-RUN conda env create -f tf-keras.yml
+RUN conda env create -f /workdir/tf-keras.yml
 
 RUN echo "conda activate tf-keras" >> ~/.bashrc
 SHELL ["/bin/bash", "--login", "-c"]
