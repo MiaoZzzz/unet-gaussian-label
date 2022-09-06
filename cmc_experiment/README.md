@@ -25,8 +25,8 @@ sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:
 4. apt-get update && apt-get upgrade -y
 5. apt-get install -y libgl1-mesa-dev
 
-6.conda env create -f ./tf-keras.yml
-7.conda activate tf-keras
+6. conda env create -f ./tf-keras.yml
+7. conda activate tf-keras
 
 8. Clone the git repository of CMC dataset   
 `git clone https://github.com/DeepPathology/MITOS_WSI_CMC.git`  
