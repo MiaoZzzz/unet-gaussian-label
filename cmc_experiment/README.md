@@ -4,7 +4,7 @@
 
 https://github.com/DeepPathology/MITOS_WSI_CMC  
 
-## How to experiment
+## How to experiment in docker
 
 0. Build Environment  
 
@@ -15,12 +15,25 @@ sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:
 # sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all --storage-opt size=120G -p 8888:8888 --name gaussunet gaussunet  
 ```
 
-1. Clone the git repository of CMC dataset   
+## How to experiment without docker
+安装anaconda
+1. wget -c https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+2. bash Anaconda3-2021.05-Linux-x86_64.sh
+3. source ~/.bashrc
+此时如果命令行前面显示（base）则安装成功，否则参考https://zhuanlan.zhihu.com/p/426655323
+
+4. apt-get update && apt-get upgrade -y
+5. apt-get install -y libgl1-mesa-dev
+
+6.conda env create -f ./tf-keras.yml
+7.conda activate tf-keras
+
+8. Clone the git repository of CMC dataset   
 `git clone https://github.com/DeepPathology/MITOS_WSI_CMC.git`  
-2. Open jupyter notebook  
+9. Open jupyter notebook  
 `jupyter notebook --allow-root --ip 0.0.0.0`  
-3. Download WSIs using MITOS_WSI_CMC/Setup.ipynb  
-4. Make a dataset with Gaussian labels using make_dataset.ipynb  
-5. Train the model  
+10. Download WSIs using MITOS_WSI_CMC/Setup.ipynb  
+11. Make a dataset with Gaussian labels using make_dataset.ipynb  
+12. Train the model  
 `python train.py`  
-6. Evaluate the model using evaluate.ipynb  
+13. Evaluate the model using evaluate.ipynb  
