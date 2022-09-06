@@ -17,16 +17,16 @@ sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:
 
 ## How to experiment without docker
 安装anaconda
-1. wget -c https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
-2. bash Anaconda3-2021.05-Linux-x86_64.sh
-3. source ~/.bashrc
+1. 'wget -c https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh'
+2. 'bash Anaconda3-2021.05-Linux-x86_64.sh'
+3. 'source ~/.bashrc'
 此时如果命令行前面显示（base）则安装成功，否则参考https://zhuanlan.zhihu.com/p/426655323
 
-4. apt-get update && apt-get upgrade -y
-5. apt-get install -y libgl1-mesa-dev
+4. 'apt-get update && apt-get upgrade -y'
+5. 'apt-get install -y libgl1-mesa-dev'
 
-6. conda env create -f ./tf-keras.yml
-7. conda activate tf-keras
+6. 'conda env create -f ./tf-keras.yml'
+7. 'conda activate tf-keras'
 
 8. Clone the git repository of CMC dataset   
 `git clone https://github.com/DeepPathology/MITOS_WSI_CMC.git`  
