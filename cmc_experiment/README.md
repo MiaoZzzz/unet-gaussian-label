@@ -16,7 +16,7 @@ sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:
 ```
 
 ## How to experiment without docker
-安装anaconda
+0. 安装anaconda
 1. ` wget -c https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh` 
 2. ` bash Anaconda3-2021.05-Linux-x86_64.sh` 
 3. ` source ~/.bashrc` 
