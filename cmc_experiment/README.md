@@ -31,7 +31,7 @@ sudo docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -p 8888:
 8. Clone the git repository of CMC dataset   
 ` git clone https://github.com/DeepPathology/MITOS_WSI_CMC.git`   
 9. Open jupyter notebook  
-`jupyter notebook `  
+`jupyter notebook --allow-root --ip 0.0.0.0`  
 10. Download WSIs using MITOS_WSI_CMC/Setup.ipynb  
 11. Make a dataset with Gaussian labels using make_dataset.ipynb  
 12. Train the model  
